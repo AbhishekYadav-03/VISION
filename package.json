@@ -1,0 +1,23 @@
+{
+  "name": "vision",
+  "version": "2.0.0",
+  "private": true,
+  "description": "VISION - Visual Information Storage, Indexing and Organisation Network. Privacy-first photo library with face indexing, people clustering and album slideshows.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "install:all": "npm --prefix server ci && npm --prefix web ci",
+    "dev": "node scripts/dev.mjs",
+    "stop": "node scripts/stop.mjs",
+    "restart": "node scripts/stop.mjs && node scripts/dev.mjs",
+    "dev:server": "npm --prefix server run dev",
+    "dev:web": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test",
+    "smoke": "npm --prefix server run test:smoke",
+    "lint": "npm --prefix web run lint"
+  }
+}
